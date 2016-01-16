@@ -6,7 +6,7 @@ mv \
     .git \
     node_modules \
     src \
-    scripts \
+    .scripts \
     webpack.config.js \
 save/
 

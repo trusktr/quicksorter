@@ -1,20 +1,20 @@
-module.exports = quicksort
+export default
 function quicksort(array, predicate) {
     _quicksort(array, 0, array.length-1, predicate ? predicate : defaultPredicate)
 }
 
 function _quicksort(array, lo, hi, predicate) {
     if (lo < hi) {
-        var pivotIndex = partition(array, lo, hi, predicate)
+        let pivotIndex = partition(array, lo, hi, predicate)
         _quicksort(array, lo, pivotIndex, predicate)
         _quicksort(array, pivotIndex + 1, hi, predicate)
     }
 }
 
 function partition(array, lo, hi, predicate) {
-    var pivot = array[lo]
-    var i = lo - 1
-    var j = hi + 1
+    let pivot = array[lo]
+    let i = lo - 1
+    let j = hi + 1
 
     while (true) {
 
@@ -32,7 +32,7 @@ function partition(array, lo, hi, predicate) {
 }
 
 function swap(array, i, j) {
-    var tmp = array[i]
+    let tmp = array[i]
     array[i] = array[j]
     array[j] = tmp
 }
